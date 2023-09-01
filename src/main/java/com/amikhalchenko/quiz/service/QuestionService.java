@@ -1,12 +1,15 @@
 package com.amikhalchenko.quiz.service;
 
 import com.amikhalchenko.quiz.entity.Question;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 public interface QuestionService {
 
-    List<Question> getAllQuestions();
+    ResponseEntity<List<Question>> getAllQuestions();
 
-    List<Question> getQuestionsByCategory(String category);
+    ResponseEntity<List<Question>> getQuestionsByCategory(String category);
+
+    ResponseEntity<Question> addQuestion(Question question);
 }
