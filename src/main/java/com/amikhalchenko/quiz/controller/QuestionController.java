@@ -2,7 +2,7 @@ package com.amikhalchenko.quiz.controller;
 
 import com.amikhalchenko.quiz.entity.Question;
 import com.amikhalchenko.quiz.service.QuestionService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,9 +10,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("question")
+@AllArgsConstructor
 public class QuestionController {
 
-    @Autowired
     QuestionService questionService;
 
     @GetMapping("allQuestions")

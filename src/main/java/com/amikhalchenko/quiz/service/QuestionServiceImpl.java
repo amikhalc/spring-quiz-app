@@ -2,7 +2,7 @@ package com.amikhalchenko.quiz.service;
 
 import com.amikhalchenko.quiz.dao.QuestionDao;
 import com.amikhalchenko.quiz.entity.Question;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class QuestionServiceImpl implements QuestionService {
 
-    @Autowired
     QuestionDao questionDao;
 
     @Override
